@@ -14,7 +14,15 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://ndujekwu.dev";
+// Resolve the live origin so og:image points at the real deployment.
+// Auto-detects on Vercel; override with NEXT_PUBLIC_SITE_URL for a custom domain.
+const SITE_FALLBACK = "https://ndujekwuu.vercel.app";
+const siteUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : SITE_FALLBACK)
+).replace(/\/$/, "");
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -37,6 +45,7 @@ export const metadata: Metadata = {
         url: "/og.png",
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "Peter Ndujekwu, Full-Stack Software Engineer",
       },
     ],
