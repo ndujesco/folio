@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# folio — Peter Ndujekwu's portfolio
 
-## Getting Started
+Personal portfolio for **Peter Ndujekwu**, full-stack software engineer. Built with
+Next.js 16 (App Router), TypeScript, Tailwind CSS v4 and Motion. Dark theme with a
+violet + warm-amber accent palette inspired by the previous portfolio.
 
-First, run the development server:
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev      # http://localhost:3000
+npm run build    # production build (Turbopack)
+npm run start    # serve the production build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Where things live
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Path | What |
+|------|------|
+| `src/app/page.tsx` | Page composition (Hero → Marquee → About → Wins → Experience → Work → Contact) |
+| `src/data/content.ts` | **Single source of truth** — edit all copy, projects, experience and achievements here |
+| `src/components/` | Section components + `BrandIcons` (inline GitHub/LinkedIn/X — lucide v1 dropped brand logos) |
+| `src/app/globals.css` | Design tokens, grid/glow background, card + tag styles |
+| `public/*.pdf` | The two generated résumés (served at `/Peter-Ndujekwu-…​.pdf`) |
+| `resumes/*.html` | Print-styled source for the résumés |
+| `scripts/` | Puppeteer responsive-audit + screenshot helpers |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Résumés
 
-## Learn More
+Two résumés are generated from print-styled HTML in `resumes/` via headless Chrome:
 
-To learn more about Next.js, take a look at the following resources:
+- **`public/Peter-Ndujekwu-Software-Engineer.pdf`** — tech-centred (linked across the site)
+- **`public/Peter-Ndujekwu-Academic-CV.pdf`** — school/academic-centred
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Regenerate after editing the HTML:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+CHROME="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+"$CHROME" --headless --no-pdf-header-footer \
+  --print-to-pdf="public/Peter-Ndujekwu-Software-Engineer.pdf" \
+  "file://$PWD/resumes/tech-resume.html"
+"$CHROME" --headless --no-pdf-header-footer \
+  --print-to-pdf="public/Peter-Ndujekwu-Academic-CV.pdf" \
+  "file://$PWD/resumes/school-resume.html"
+```
 
-## Deploy on Vercel
+## Responsive testing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`scripts/shots.mjs` captures full-page screenshots at 320/375/414/768/1024/1440 and
+flags any horizontal overflow; `scripts/sections.mjs` captures readable per-section
+shots. Run with the prod server up:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+PORT=4317 npm run start &
+node scripts/shots.mjs        # overflow audit + screenshots → /tmp/shots
+```
+
+Verified clean (no horizontal overflow) at every breakpoint, with a working mobile menu.

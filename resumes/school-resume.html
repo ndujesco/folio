@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Peter Ndujekwu · Academic CV</title>
+<style>
+  @page { size: A4; margin: 14mm 15mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --ink: #14161d;
+    --dim: #45495a;
+    --faint: #6b7180;
+    --accent: #1d3a8a;
+    --line: #d7dae2;
+  }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Georgia", "Times New Roman", serif;
+    color: var(--ink);
+    font-size: 10.4px;
+    line-height: 1.5;
+  }
+  a { color: var(--accent); text-decoration: none; }
+
+  header { text-align: center; border-bottom: 1.5px solid var(--ink); padding-bottom: 10px; margin-bottom: 12px; }
+  .name { font-size: 25px; font-weight: 700; letter-spacing: 0.4px; }
+  .title { font-size: 11.5px; font-style: italic; color: var(--accent); margin-top: 2px; }
+  .contact { margin-top: 7px; font-size: 9.4px; color: var(--dim); }
+  .contact span.sep { color: var(--line); margin: 0 6px; }
+
+  h2 {
+    font-family: "Georgia", serif;
+    font-size: 11px; text-transform: uppercase; letter-spacing: 1.6px;
+    color: var(--accent); border-bottom: 1px solid var(--line);
+    padding-bottom: 2.5px; margin: 13px 0 6px; font-weight: 700;
+  }
+
+  .summary { color: var(--dim); margin-bottom: 4px; font-style: italic; }
+
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .place { font-weight: 700; }
+  .accent { color: var(--accent); font-weight: 700; }
+  .period { font-size: 9.2px; color: var(--faint); white-space: nowrap; font-style: italic; }
+  .item { margin-bottom: 8px; }
+  ul { list-style: none; margin-top: 3px; }
+  li { position: relative; padding-left: 12px; margin-bottom: 1.5px; color: var(--dim); }
+  li::before { content: "–"; position: absolute; left: 1px; top: 0; color: var(--accent); }
+  .gpa { color: var(--ink); font-weight: 700; }
+
+  .honors li::before { content: "•"; }
+  .skills .k { font-weight: 700; color: var(--ink); display: inline-block; min-width: 96px; }
+  .skills div { margin-bottom: 2.5px; }
+  .muted { color: var(--faint); font-style: italic; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="name">Peter Ugochukwu Ndujekwu</div>
+    <div class="title">Electrical &amp; Electronics Engineering Undergraduate · Software Engineer</div>
+    <div class="contact">
+      ugopeter26@gmail.com<span class="sep">|</span>0706 121 7361<span class="sep">|</span>Lagos, Nigeria
+      <br />
+      <a href="https://github.com/ndujesco">github.com/ndujesco</a><span class="sep">|</span>
+      <a href="https://www.linkedin.com/in/ndujekwu/">linkedin.com/in/ndujekwu</a>
+    </div>
+  </header>
+
+  <p class="summary">
+    Final-year First-Class Electrical &amp; Electronics Engineering student with a strong record in both
+    engineering coursework and applied software, and a national hackathon-winning track record.
+  </p>
+
+  <h2>Education</h2>
+  <div class="item">
+    <div class="row">
+      <span><span class="place">University of Lagos</span> · B.Eng. Electrical &amp; Electronics Engineering</span>
+      <span class="period">2020 – 2026</span>
+    </div>
+    <ul>
+      <li><span class="gpa">CGPA: 4.76 / 5.0 · First Class Honours (projected)</span></li>
+      <li>Relevant coursework: Circuit Theory, Signals &amp; Systems, Control Systems, Microcontrollers &amp; Embedded Systems, Electronics, Digital Signal Processing, Communications.</li>
+      <li>Tools: MATLAB, Proteus, LTSpice, Fritzing, Arduino.</li>
+    </ul>
+  </div>
+
+  <h2>Honours &amp; Awards</h2>
+  <ul class="honors">
+    <li><span class="accent">Grand Prize Winner · Zecathon 2025</span> (Zenith Bank Tech Fair 5.0), Team TrustLoop: ₦30,000,000 for a digital KYC &amp; liveness-verification solution, selected from 100+ competing teams.</li>
+    <li><span class="accent">Winner · ABC Hackathon</span>, Team Zer0day Saints (FIG, a federated national digital-identity gateway).</li>
+    <li><span class="accent">Finalist · Cyberfest Hackathon</span>, Team Zer0day Saints (SpecterAPI, an API-security tool).</li>
+    <li><span class="accent">Winner · Afrihack</span>, Team Aegis.</li>
+    <li>First-Class standing maintained across the EEE programme.</li>
+  </ul>
+
+  <h2>Leadership</h2>
+  <div class="item">
+    <div class="row">
+      <span><span class="place">Technical Lead</span> · <span class="accent">Claude Builder Club, University of Lagos</span></span>
+      <span class="period">2025 – Present</span>
+    </div>
+    <ul>
+      <li>Lead the technical arm of UNILAG's official Anthropic-powered student AI community.</li>
+      <li>Mentor students to build real projects with the Claude API; helped run the Claude Hackathon (110+ teams).</li>
+    </ul>
+  </div>
+
+  <h2>Engineering &amp; Research Projects</h2>
+  <div class="item">
+    <div class="row"><span class="place">Arduino-Based Digital FM Radio</span><span class="period">Jun 2024</span></div>
+    <ul>
+      <li>Designed a digital FM radio circuit in Fritzing and programmed an Arduino Uno for signal processing and frequency tuning.</li>
+      <li>Integrated the TEA5767 FM receiver module and LM386 amplifier for high-quality audio output.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><span class="place">Automatic Light Switch with Motion Detection</span><span class="period">Jan 2024</span></div>
+    <ul>
+      <li>Built a motion-activated lighting system using sensors and electronic components to improve energy efficiency.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <div class="row"><span class="place">Crypto-Graph Watch</span><span class="period">Coursework</span></div>
+    <ul>
+      <li>Implemented data-visualisation tooling for cryptocurrency trends in MATLAB.</li>
+    </ul>
+  </div>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <div><span class="k">Engineering</span>MATLAB, Proteus, LTSpice, Fritzing, Arduino, Embedded C</div>
+    <div><span class="k">Programming</span>C++, C, Python, JavaScript, TypeScript, SQL</div>
+    <div><span class="k">Software</span>React, Next.js, Node.js, NestJS, FastAPI, Flask, MongoDB, PostgreSQL, Git, Docker</div>
+  </div>
+
+  <h2>Software Experience</h2>
+  <div class="item">
+    <div class="row"><span><span class="place">Software Engineer Intern</span> · <span class="accent">Afretec Network</span></span><span class="period">Sep 2024 – Dec 2024</span></div>
+    <ul><li>Engineering placement with a startup; received organisational recognition for contributions.</li></ul>
+  </div>
+  <div class="item">
+    <div class="row"><span><span class="place">Backend Engineer</span> · <span class="accent">TekTalk NG · Huelage</span></span><span class="period">2022 – 2024</span></div>
+    <ul><li>Built and scaled backends (Node.js/MongoDB, NestJS/GraphQL); owned testing and code reviews.</li></ul>
+  </div>
+
+  <p class="muted" style="margin-top:10px; text-align:center;">References available on request.</p>
+</body>
+</html>

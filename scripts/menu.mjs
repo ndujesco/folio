@@ -1,0 +1,11 @@
+import puppeteer from "puppeteer-core";
+const b = await puppeteer.launch({ executablePath:"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome", headless:"new", args:["--no-sandbox","--hide-scrollbars"]});
+const p = await b.newPage();
+await p.setViewport({width:375,height:812,deviceScaleFactor:2});
+await p.goto("http://localhost:4317/",{waitUntil:"networkidle0"});
+await p.click('button[aria-label="Open menu"]');
+await new Promise(r=>setTimeout(r,500));
+const expanded = await p.$eval('button[aria-expanded]', el=>el.getAttribute('aria-expanded'));
+await p.screenshot({path:"/tmp/shots/m375-menu-open.png"});
+console.log("menu aria-expanded:", expanded);
+await b.close();

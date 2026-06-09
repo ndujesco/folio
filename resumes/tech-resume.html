@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Peter Ndujekwu · Software Engineer</title>
+<style>
+  @page { size: A4; margin: 13mm 14mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --ink: #14161d;
+    --dim: #4a4f5e;
+    --faint: #6b7180;
+    --violet: #6a19ff;
+    --line: #d9dce4;
+  }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    font-size: 10.2px;
+    line-height: 1.45;
+  }
+  a { color: var(--violet); text-decoration: none; }
+
+  /* Header */
+  header { border-bottom: 2.5px solid var(--violet); padding-bottom: 9px; margin-bottom: 11px; }
+  .name { font-size: 25px; font-weight: 800; letter-spacing: -0.4px; }
+  .title { font-size: 12px; font-weight: 600; color: var(--violet); margin-top: 1px; }
+  .contact { margin-top: 6px; font-size: 9.4px; color: var(--dim); display: flex; flex-wrap: wrap; gap: 4px 12px; }
+  .contact span.sep { color: var(--line); }
+
+  .summary { margin-bottom: 11px; color: var(--dim); font-size: 10.2px; }
+  .summary strong { color: var(--ink); }
+
+  h2 {
+    font-size: 10.5px; text-transform: uppercase; letter-spacing: 1.1px;
+    color: var(--violet); border-bottom: 1px solid var(--line);
+    padding-bottom: 2.5px; margin: 13px 0 7px;
+  }
+
+  .item { margin-bottom: 8px; }
+  .item:last-child { margin-bottom: 0; }
+  .row { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .role { font-weight: 700; font-size: 10.8px; }
+  .org { font-weight: 600; color: var(--violet); }
+  .period { font-size: 9px; color: var(--faint); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  ul { list-style: none; margin-top: 3px; }
+  li { position: relative; padding-left: 11px; margin-bottom: 1.5px; color: var(--dim); }
+  li::before { content: ""; position: absolute; left: 1px; top: 5.5px; width: 3px; height: 3px; border-radius: 50%; background: var(--violet); }
+
+  /* Highlights band */
+  .wins { display: grid; grid-template-columns: 1fr 1fr; gap: 5px 14px; }
+  .win { padding-left: 11px; position: relative; color: var(--dim); }
+  .win::before { content: "★"; position: absolute; left: 0; top: 0; color: var(--violet); font-size: 9px; }
+  .win b { color: var(--ink); }
+
+  .skills div { margin-bottom: 3px; }
+  .skills .k { font-weight: 700; color: var(--ink); display: inline-block; min-width: 92px; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; }
+  .proj b { color: var(--ink); }
+  .proj { color: var(--dim); margin-bottom: 4px; }
+  .muted { color: var(--faint); font-size: 9px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="name">Peter Ugochukwu Ndujekwu</div>
+    <div class="title">Full-Stack Software Engineer</div>
+    <div class="contact">
+      <span>ugopeter26@gmail.com</span><span class="sep">|</span>
+      <span>0706 121 7361</span><span class="sep">|</span>
+      <span>Lagos, Nigeria</span><span class="sep">|</span>
+      <a href="https://github.com/ndujesco">github.com/ndujesco</a><span class="sep">|</span>
+      <a href="https://www.linkedin.com/in/ndujekwu/">linkedin.com/in/ndujekwu</a>
+    </div>
+  </header>
+
+  <p class="summary">
+    Full-stack software engineer with <strong>3+ years</strong> shipping production web apps end-to-end,
+    polished <strong>React / Next.js / TypeScript</strong> front-ends and scalable
+    <strong>Node.js, NestJS, Express and FastAPI</strong> back-ends over SQL, NoSQL and GraphQL.
+    Grand-prize winner of <strong>Zecathon 2025</strong> and Technical Lead of UNILAG's Claude Builder Club.
+  </p>
+
+  <h2>Selected Achievements</h2>
+  <div class="wins">
+    <div class="win"><b>Zecathon 2025 · Grand Prize (₦30M)</b>, Team TrustLoop: digital KYC &amp; liveness verification, vs 100+ teams.</div>
+    <div class="win"><b>ABC Hackathon · Winner</b>, Team Zer0day Saints: built FIG, a federated digital-identity gateway.</div>
+    <div class="win"><b>Afrihack · Winner</b>, Team Aegis.</div>
+    <div class="win"><b>Technical Lead</b>, Claude Builder Club, UNILAG (Anthropic-powered).</div>
+  </div>
+
+  <h2>Experience</h2>
+
+  <div class="item">
+    <div class="row"><span><span class="role">Technical Lead</span> · <span class="org">Claude Builder Club, UNILAG</span></span><span class="period">2025 – Present</span></div>
+    <ul>
+      <li>Lead the technical direction of UNILAG's official Anthropic-powered AI community.</li>
+      <li>Built the club's platform with Next.js &amp; TypeScript; helped run the Claude Hackathon (110+ teams).</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="row"><span><span class="role">Software Engineer Intern</span> · <span class="org">Afretec Network (w/ Waltersam Services)</span></span><span class="period">Sep 2024 – Dec 2024</span></div>
+    <ul>
+      <li>Completed an intensive engineering placement embedded with a startup.</li>
+      <li>Received organisational recognition for outstanding contributions.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="row"><span><span class="role">Backend Engineer</span> · <span class="org">TekTalk NG</span></span><span class="period">Sep 2022 – Present</span></div>
+    <ul>
+      <li>Design and maintain database relations and backend architecture for a social network for techies.</li>
+      <li>Improve performance and scalability with Node.js and MongoDB; build complex user relationships and queries.</li>
+      <li>Drive timely code reviews and clean-code practices across the team.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="row"><span><span class="role">Backend Engineer</span> · <span class="org">Huelage</span></span><span class="period">Jul 2023 – Feb 2024</span></div>
+    <ul>
+      <li>Built and scaled the backend with NestJS and GraphQL; owned unit, integration and E2E testing with Jest.</li>
+      <li>Handled and protected sensitive user information.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="row"><span><span class="role">Software Engineer (Freelance)</span> · <span class="org">Independent</span></span><span class="period">2023 – 2024</span></div>
+    <ul>
+      <li>Delivered client and in-house web apps with Node.js, React, Next.js, TypeScript, NestJS and FastAPI.</li>
+    </ul>
+  </div>
+
+  <div class="item">
+    <div class="row"><span><span class="role">Backend Intern</span> · <span class="org">Tishlabs</span></span><span class="period">Apr 2022 – Jul 2022</span></div>
+    <ul>
+      <li>Built an e-commerce web app for a New York–based cafe; performed bug fixes and code reviews.</li>
+    </ul>
+  </div>
+
+  <h2>Projects</h2>
+  <div class="two-col">
+    <div>
+      <p class="proj"><b>TrustLoop</b> · KYC &amp; liveness verification platform (₦30M Zecathon winner). <span class="muted">Next.js · FastAPI</span></p>
+      <p class="proj"><b>FIG</b> · federated digital-identity gateway, ABC Hackathon winner. <span class="muted">Python · Flask</span></p>
+    </div>
+    <div>
+      <p class="proj"><b>Claude Builder Club UNILAG</b> · community web platform. <span class="muted">Next.js · TS</span></p>
+      <p class="proj"><b>TekTalk</b> · social network for techies; backend &amp; data model. <span class="muted">Node · MongoDB</span></p>
+    </div>
+  </div>
+
+  <h2>Technical Skills</h2>
+  <div class="skills">
+    <div><span class="k">Languages</span>TypeScript, JavaScript, Python, C++, C, SQL</div>
+    <div><span class="k">Frontend</span>React, Next.js, Redux, TailwindCSS, SCSS, Vite, Figma</div>
+    <div><span class="k">Backend</span>Node.js, Express, NestJS, FastAPI, Flask, GraphQL, REST APIs, WebSockets</div>
+    <div><span class="k">Data &amp; Infra</span>PostgreSQL, MongoDB, MySQL, Docker, Vercel, Render, Firebase</div>
+    <div><span class="k">Practices</span>Git, Jest, Unit/Integration/E2E testing, Code review, Clean architecture, Jira</div>
+  </div>
+
+  <h2>Education</h2>
+  <div class="row">
+    <span><span class="role">B.Eng. Electrical &amp; Electronics Engineering</span> · <span class="org">University of Lagos</span></span>
+    <span class="period">2020 – 2026</span>
+  </div>
+  <p class="muted" style="margin-top:2px;">First Class · CGPA 4.76 / 5.0</p>
+</body>
+</html>
