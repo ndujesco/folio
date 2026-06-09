@@ -61,12 +61,12 @@ function CodeCard() {
           <span className="h-3 w-3 rounded-full bg-[#ff5f57]" />
           <span className="h-3 w-3 rounded-full bg-[#febc2e]" />
           <span className="h-3 w-3 rounded-full bg-[#28c840]" />
-          <span className="cw-file ml-2 font-mono text-xs">peter.ts</span>
+          <span className="cw-file ml-2 font-mono text-xs">ugo.ts</span>
         </div>
         <pre className="overflow-x-auto p-5 font-mono text-[12.5px] leading-relaxed sm:text-sm">
           <code>
             <span className="cw-key">const</span>{" "}
-            <span className="cw-name">peter</span>{" "}
+            <span className="cw-name">ugo</span>{" "}
             <span className="cw-punc">=</span>{" "}
             <span className="cw-punc">{"{"}</span>
             {"\n"}
@@ -152,7 +152,7 @@ export default function Hero() {
             animate="show"
             className="text-4xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
           >
-            Hi, I&apos;m <span className="text-gradient">Peter</span>.
+            Hi, I&apos;m <span className="text-gradient">Ugo</span>.
           </motion.h1>
 
           <motion.div
